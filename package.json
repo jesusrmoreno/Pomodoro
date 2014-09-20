@@ -1,0 +1,16 @@
+{
+    "name": "",
+    "version": "1.0.0",
+    "description": "",
+    "author": "jesusrmoreno",
+    "license": "ISC",
+    "main": "index.html",
+    "window": {
+        "frame": false,
+        "width": 344,
+        "height": 152,
+        "toolbar": true,
+        "resizable": false,
+        "show": false
+    }
+}

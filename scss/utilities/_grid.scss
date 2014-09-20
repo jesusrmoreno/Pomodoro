@@ -1,0 +1,49 @@
+// Grid System for fixed width apps
+// Useful for node-webkit apps
+// May eventually expand to variable width
+// 
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@mixin columns($columns, $size:8) {
+    width: $columns * $size + px;
+}
+
+@mixin rows($rows, $size:8) {
+    height: $rows * $size + px;
+}
+
+@mixin offset-y($rows, $size:8, $direction:top) {
+    position: absolute;
+    @if $direction == top {
+        top: $rows * $size + px; 
+    } @else {
+        bottom: $rows * $size + px;
+    }
+}
+
+@mixin offset-x($columns, $size:8, $direction:left) {
+    position: absolute;
+    @if $direction == left {
+        left: $columns * $size + px;
+    } @else {
+        right: $columns * $size + px;
+    }
+}
+
+%vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+%wireframe {
+    outline: 1px dotted white;
+    background-color: rgba(49,106,161, .3);
+    color: white;
+}

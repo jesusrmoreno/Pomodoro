@@ -1,0 +1,21 @@
+{
+  "name": "CatchUpPomodoro",
+  "version": "0.0.0",
+  "authors": [
+    "Jesus R. Moreno <jesus.r.moreno.16@dartmouth.edu>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "animo.js": "*"
+  }
+}

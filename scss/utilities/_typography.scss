@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('../font/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Light';
+  src: url('../font/Roboto-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Thin';
+  src: url('../font/Roboto-Thin.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Black';
+  src: url('../font/Roboto-Black.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url('../font/Roboto-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('../font/Roboto-Condensed.ttf') format('truetype');
+}
+
+$_gmd-type-styles: (
+  display4: (
+    font-family: 'Roboto Light',
+    font-size: 8em,
+    color: rgba(black, .54),
+  ),
+  display3: (
+    font-family: 'Roboto Regular',
+    font-size: 4em,
+    color: rgba(black, .54),
+  ),
+  display2: (
+    font-family: 'Roboto Regular',
+    font-size: 3.21428571em,
+    color: rgba(black, .54),
+  ),
+  display1: (
+    font-family: 'Roboto Regular',
+    font-size: 2.42857143em,
+    color: rgba(black, .54),
+  ),
+  headline: (
+    font-family: 'Roboto Regular',
+    font-size: 1.71428571em,
+    color: rgba(black, .87),
+  ),
+  title: (
+    font-family: 'Roboto Medium',
+    font-size: 1.42857143em,
+    color: rgba(black, .87),
+  ),
+  subhead: (
+    font-family: 'Roboto Regular',
+    font-size: 1.14285714em,
+    color: rgba(black, .87),
+  ),
+  body2: (
+    font-family: 'Roboto Medium',
+    font-size: 1em,
+    color: rgba(black, .87),
+  ),
+  body1: (
+    font-family: 'Roboto Regular',
+    font-size: 1em,
+    color: rgba(black, .87),
+  ),
+  caption: (
+    font-family: 'Roboto Regular',
+    font-size: .85714286em,
+    color: rgba(black, .54),
+  ),
+  menu: (
+    font-family: 'Roboto Medium',
+    font-size: 1em,
+    color: rgba(black, .87),
+  ),
+  button: (
+    font-family: 'Roboto Medium',
+    font-size: 1em,
+    text-transform: uppercase,
+    color: rgba(black, .87),
+  )
+);
+
+@mixin gmd-type-style($type) {
+  $style: map-get($_gmd-type-styles, $type);
+  @each $property, $value in $style {
+    #{$property}: $value;
+  }
+}

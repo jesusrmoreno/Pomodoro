@@ -1,0 +1,6 @@
+PWD /Users/jesusfromthesky/Desktop/Pomodoro/css
+INPUT /usr/local/texlive/2013/texmf.cnf
+INPUT /usr/local/texlive/2013/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2013/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/jesusfromthesky/Desktop/Pomodoro/css/adsf.py
+OUTPUT /Users/jesusfromthesky/Desktop/Pomodoro/css/adsf.log

@@ -1,0 +1,135 @@
+@import 'utilities/grid';
+@import 'utilities/reset';
+@import 'utilities/typography';
+@import 'utilities/z-depth';
+@import 'utilities/colors';
+
+$accent  : color($pink, a200);
+$primary : #EE4057;
+
+
+#close-button {
+    @include offset-x(1);
+    @include offset-y(1);
+    -webkit-app-region: no-drag;
+    z-index: 99999;
+    i {
+        -webkit-app-region: no-drag;
+        color: white;
+        font-size: .8em;
+    }
+}
+#floating-action-button {
+    @include columns(8);
+    @include rows(8);
+    @include offset-x(15);
+    @include offset-y(2, 8, "bottom");
+    @include gmd-z-depth(1);
+    background-color: $accent;
+    border-radius: 100%;
+    transition: 250ms all;
+
+    &:hover {
+        @include gmd-z-depth(5);
+        -webkit-transform: translateY(-2px);
+    }
+
+    &:active {
+        @include gmd-z-depth(1);
+        -webkit-transform: translateY(0px);
+    }
+}
+
+#icon-section {
+    @include offset-x(0);
+    @include offset-y(0);
+    @include columns(19);
+    @include rows(19);
+    -webkit-app-region: drag;
+    background-color: $primary;
+    border-right: 1px solid rgba(0, 0, 0, .3);
+
+    div {
+        @include columns(19);
+        @include rows(19);
+        text-align: center;
+
+        i {
+            text-shadow: 0px 0px rgba(darken($primary, 10%), .5);
+            position: relative;
+            top: 36px;
+            display: inline-block;
+            color: white;
+            font-size: 5rem;
+        }
+    }
+}
+
+#content-section {
+    @include offset-x(19);
+    @include columns(24);
+    @include rows(19);
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    background-color: #FFFFFF;
+
+    #time-display {
+        @include rows(8);
+        h1 {
+            @include gmd-type-style(display2);
+            font-weight: 100;
+            margin: 0;
+            position: relative;
+        }
+
+        h2 {
+            @include gmd-type-style(button);
+            color: rgba(0, 0, 0, .54);
+            position: relative;
+            text-transform: capitalize;
+        }
+    }
+
+    #controls {
+        -webkit-app-region: no-drag;
+        @include rows(9);
+        
+        div {
+            display: inline-block;
+            -webkit-app-region: no-drag;
+            @include rows(9);
+            width: auto;
+            
+            i {
+                @extend %vertical-align;
+                -webkit-app-region: no-drag;
+                font-size: 1.2rem;
+                color: rgba(0, 0, 0, .24);
+                display: inline-block;
+                transition: 250ms all;
+                // border: 1px solid red;
+                border-radius: 5px;
+                left: -8px;
+                padding: 8px;
+                padding-right: 16px;
+                margin-right: 16px;
+
+                
+                &:hover {
+                    -webkit-app-region: no-drag;
+                    // @include gmd-z-depth(1);
+                    color: $primary;
+                }
+
+                &:active {
+                    -webkit-app-region: no-drag;
+                    // color: black;
+                    // @include gmd-z-depth(0);
+                }
+            }
+        }
+    }
+}
+
+
+
