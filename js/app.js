@@ -17,12 +17,11 @@ var Timer = (function() {
     function setTarget(val) {
         timer.time = timer.target = val * 60;
     }
-
+    
     function toggleTimer() {
         if (timer.type === undefined) {
             updateState();
         }
-
         if (typeof timer.timeoutId === 'number') {
             window.clearTimeout(timer.timeoutId);
             timer.timeoutId = undefined;
@@ -30,7 +29,7 @@ var Timer = (function() {
         } else {
             controller.emit('toggle', 'unpaused');
             // controller.emit('stateChange', timer.type);
-            tick(); 
+            tick();
         }
     }
 
@@ -99,6 +98,8 @@ var Timer = (function() {
         mainWindow.show();
         mainWindow.focus();
 
+        // UI Controls and Logic go below this line
+        
         $('#timer-toggle').on('click', function() {
             pomodoro.toggleTimer();
             $('#timer-toggle')
@@ -119,7 +120,7 @@ var Timer = (function() {
             }
         });
 
-        $('#close-button-i').on('click', function() {
+        $('#close-button').on('click', function() {
             mainWindow.close();
         })
 

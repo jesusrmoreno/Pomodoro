@@ -58,11 +58,17 @@ button {
   position: absolute;
   top: 8px;
   -webkit-app-region: no-drag;
-  z-index: 99999; }
+  z-index: 99999;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  transition: all 150ms; }
   #close-button i {
     -webkit-app-region: no-drag;
     color: white;
     font-size: .8em; }
+  #close-button:hover {
+    background-color: rgba(0, 0, 0, 0.1); }
 
 #floating-action-button {
   width: 64px;
@@ -90,14 +96,14 @@ button {
   width: 152px;
   height: 152px;
   -webkit-app-region: drag;
-  background-color: #ee4057;
-  border-right: 1px solid rgba(0, 0, 0, 0.3); }
-  #icon-section div {
+  background-color: #ff2d55;
+  border-right: 1.5px solid rgba(0, 0, 0, 0.5); }
+  #icon-section #current-state-section {
     width: 152px;
     height: 152px;
     text-align: center; }
-    #icon-section div i {
-      text-shadow: 0px 0px rgba(230, 21, 48, 0.5);
+    #icon-section #current-state-section i {
+      text-shadow: 0px 0px rgba(249, 0, 47, 0.5);
       position: relative;
       top: 36px;
       display: inline-block;
@@ -111,7 +117,7 @@ button {
   height: 152px;
   padding-left: 1.5rem;
   padding-top: 1rem;
-  background-color: #FFFFFF; }
+  background-color: #FCFCFD; }
   #content-section #time-display {
     height: 64px; }
     #content-section #time-display h1 {
@@ -150,6 +156,6 @@ button {
         margin-right: 16px; }
         #content-section #controls div i:hover {
           -webkit-app-region: no-drag;
-          color: #ee4057; }
+          color: #ff2d55; }
         #content-section #controls div i:active {
           -webkit-app-region: no-drag; }
