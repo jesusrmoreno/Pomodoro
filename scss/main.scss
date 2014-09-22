@@ -7,6 +7,10 @@
 $accent  : color($pink, a200);
 $primary : #FF2D55;
 
+body, html {
+    background-color: transparent;
+
+}
 
 #close-button {
     @include offset-x(1);
@@ -27,7 +31,7 @@ $primary : #FF2D55;
     }
 
     &:hover {
-        background-color: rgba(0, 0, 0, .1);
+        background-color: rgba(0, 0, 0, .3);
     }
 }
 
@@ -59,7 +63,8 @@ $primary : #FF2D55;
     @include columns(19);
     @include rows(19);
     -webkit-app-region: drag;
-    background-color: $primary;
+    // background-color: $primary;
+    background-image: -webkit-linear-gradient(top, #FF2274 0%, #FF2956 100%);
     border-right: 1.5px solid rgba(0, 0, 0, .5);
 
     #current-state-section {
@@ -85,6 +90,7 @@ $primary : #FF2D55;
     padding-left: 1.5rem;
     padding-top: 1rem;
     background-color: #FCFCFD;
+    
 
     #time-display {
         @include rows(8);

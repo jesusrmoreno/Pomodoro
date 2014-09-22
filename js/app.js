@@ -1,3 +1,17 @@
+
+function keylines() {
+    for (var i = 0; i < $(window).width(); i++) {
+        if (i % 8 == 0) {
+            $('body').append('<div class="v-line" style="height: 100%; top: 0px; z-index:999999999; position:absolute;' + 'left:' + i + 'px; width: 1px; background: rgba(236,63,122, .4);">');
+        }
+    }
+    for (var i = 0; i < $(window).height(); i++) {
+        if (i % 8 == 0) {
+            $('body').append('<div class="h-line" style="width: 100%; z-index:9999999; left: 0px; position:absolute;' + 'top:' + i + 'px; height: 1px; background: rgba(236,63,122, 1);">');
+        }
+    }
+}
+
 var Timer = (function() {
     var EventEmitter = require('events').EventEmitter;
     var controller   = new EventEmitter();
@@ -92,14 +106,17 @@ var Timer = (function() {
     };
 
 
+
+
+
+
     tick.volume = ding.volume = appController.volume;
 
     $(window).load(function() {
-        mainWindow.show();
-        mainWindow.focus();
+
+
 
         // UI Controls and Logic go below this line
-        
         $('#timer-toggle').on('click', function() {
             pomodoro.toggleTimer();
             $('#timer-toggle')

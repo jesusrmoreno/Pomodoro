@@ -13,6 +13,9 @@
 <link href="bower_components/animo.js/animate+animo.css" rel="stylesheet" type="text/css">
     </head>
     <body>
+        <div id="container-full">
+            
+        
         <div id="close-button">
             <i id="close-button-i" class=" fa-fw icon-material-close"></i>
         </div>
@@ -48,5 +51,13 @@
                  
             </div>
         </div>
+        </div>
+        <script>
+            var gui = require('nw.gui');
+
+            onload = function() {
+              gui.Window.get().show();
+            }
+        </script>
     </body>
 </html>

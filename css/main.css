@@ -52,6 +52,9 @@ button {
 @font-face {
   font-family: 'Roboto Condensed';
   src: url("../font/Roboto-Condensed.ttf") format("truetype"); }
+body, html {
+  background-color: transparent; }
+
 #close-button {
   position: absolute;
   left: 8px;
@@ -68,7 +71,7 @@ button {
     color: white;
     font-size: .8em; }
   #close-button:hover {
-    background-color: rgba(0, 0, 0, 0.1); }
+    background-color: rgba(0, 0, 0, 0.3); }
 
 #floating-action-button {
   width: 64px;
@@ -96,7 +99,7 @@ button {
   width: 152px;
   height: 152px;
   -webkit-app-region: drag;
-  background-color: #ff2d55;
+  background-image: -webkit-linear-gradient(top, #ff2274 0%, #ff2956 100%);
   border-right: 1.5px solid rgba(0, 0, 0, 0.5); }
   #icon-section #current-state-section {
     width: 152px;
