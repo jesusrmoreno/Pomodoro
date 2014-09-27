@@ -97,6 +97,14 @@ var Timer = (function() {
 (function($, pomodoro) {
     var gui        = require('nw.gui');
     var mainWindow = gui.Window.get();
+    var mb = new gui.Menu({
+        type: 'menubar'
+    });
+    
+    mb.createMacBuiltin('Catchup');
+    mainWindow.menu = mb;
+
+
 
     var ding = new Audio('./audio/Ding.wav');
     var tick = new Audio('./audio/tick.wav');
@@ -104,12 +112,7 @@ var Timer = (function() {
     var appController = {
         volume: 0.5,
     };
-
-
-
-
-
-
+    
     tick.volume = ding.volume = appController.volume;
 
     $(window).load(function() {

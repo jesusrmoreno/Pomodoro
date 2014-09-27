@@ -6,8 +6,8 @@
     "license": "ISC",
     "main": "index.html",
     "window": {
-        "transparent": true,
-        "frame": false,
+        "transparent": false,
+        "frame": true,
         "width": 344,
         "height": 152,
         "toolbar": true,

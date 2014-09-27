@@ -123,7 +123,8 @@ body, html {
                 @extend %vertical-align;
                 -webkit-app-region: no-drag;
                 font-size: 1.2rem;
-                color: rgba(0, 0, 0, .24);
+                // color: rgba(0, 0, 0, .24);
+                color: rgba(#595959, .7);
                 display: inline-block;
                 transition: 250ms all;
                 // border: 1px solid red;

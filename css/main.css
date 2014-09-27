@@ -149,7 +149,7 @@ body, html {
       #content-section #controls div i {
         -webkit-app-region: no-drag;
         font-size: 1.2rem;
-        color: rgba(0, 0, 0, 0.24);
+        color: rgba(89, 89, 89, 0.7);
         display: inline-block;
         transition: 250ms all;
         border-radius: 5px;
